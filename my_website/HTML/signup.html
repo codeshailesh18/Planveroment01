@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Login / Signup</title>
+
+<style>
+/* =====================
+   GLOBAL STYLES
+===================== */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body{
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background: linear-gradient(135deg,#1abc9c,#2ecc71);
+  overflow:hidden;
+}
+
+/* =====================
+   GLASS CONTAINER
+===================== */
+.container{
+  width:380px;
+  backdrop-filter: blur(15px);
+  background: rgba(255,255,255,0.15);
+  border-radius:20px;
+  padding:40px 30px;
+  box-shadow:0 15px 35px rgba(0,0,0,0.3);
+  color:white;
+  position:relative;
+  transition:0.4s;
+}
+
+/* =====================
+   HEADER
+===================== */
+.container h2{
+  text-align:center;
+  margin-bottom:25px;
+  font-weight:600;
+}
+
+/* =====================
+   INPUTS
+===================== */
+.input-box{
+  margin-bottom:18px;
+  position:relative;
+}
+
+.input-box input{
+  width:100%;
+  padding:12px 15px;
+  border:none;
+  outline:none;
+  border-radius:10px;
+  background: rgba(255,255,255,0.25);
+  color:white;
+  font-size:14px;
+}
+
+.input-box input::placeholder{
+  color:#eee;
+}
+
+/* =====================
+   BUTTON
+===================== */
+.btn{
+  width:100%;
+  padding:12px;
+  border:none;
+  border-radius:10px;
+  background:#ffffff;
+  color:#2ecc71;
+  font-weight:600;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.btn:hover{
+  transform:scale(1.05);
+}
+
+/* =====================
+   TOGGLE LINK
+===================== */
+.toggle{
+  text-align:center;
+  margin-top:15px;
+  font-size:14px;
+}
+
+.toggle span{
+  color:#fff;
+  font-weight:600;
+  cursor:pointer;
+  text-decoration:underline;
+}
+
+/* =====================
+   HIDDEN FORM
+===================== */
+.hidden{
+  display:none;
+}
+
+/* =====================
+   RESPONSIVE
+===================== */
+@media(max-width:420px){
+  .container{
+    width:95%;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- LOGIN FORM -->
+  <form id="loginForm">
+    <h2>Login</h2>
+
+    <div class="input-box">
+      <input type="email" placeholder="Email" required>
+    </div>
+
+    <div class="input-box">
+      <input type="password" placeholder="Password" required>
+    </div>
+
+    <button class="btn">Login</button>
+
+    <div class="toggle">
+      Don't have an account?
+      <span onclick="toggleForms()">Sign Up</span>
+    </div>
+  </form>
+
+
+  <!-- SIGNUP FORM -->
+  <form id="signupForm" class="hidden">
+    <h2>Create Account</h2>
+
+    <div class="input-box">
+      <input type="text" placeholder="Full Name" required>
+    </div>
+
+    <div class="input-box">
+      <input type="email" placeholder="Email" required>
+    </div>
+
+    <div class="input-box">
+      <inp
